@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from eduport.webestica.com/cart by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Jan 2022 09:16:59 GMT -->
+
+<head>
+    <title>Eduport - LMS, Education and Course Theme</title>
+
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Webestica.com">
+    <meta name="description" content="Eduport- LMS, Education and Course Theme">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&amp;family=Roboto:wght@400;500;700&amp;display=swap">
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+    <!-- Theme CSS -->
+    <link id="style-switch" rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+
+</head>
+
+
+<body>
+
+    <!-- Header START -->
+    <header class="navbar-light navbar-sticky header-static">
+        <!-- Logo Nav START -->
+        <nav class="navbar navbar-expand-xl">
+            <div class="container-fluid px-3 px-xl-5">
+                <!-- Logo START -->
+                <a class="navbar-brand" href="/">
+                    <img class="light-mode-item navbar-brand-item" src="/assets/images/logo.svg" alt="logo">
+                    <img class="dark-mode-item navbar-brand-item" src="/assets/images/logo-light.svg" alt="logo">
+                </a>
+                <!-- Logo END -->
+
+                <!-- Responsive navbar toggler -->
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-animation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+
+                <!-- Main navbar START -->
+                <div class="navbar-collapse w-100 collapse" id="navbarCollapse">
+
+                    <!-- Nav category menu START -->
+                    <ul class="navbar-nav navbar-nav-scroll me-auto">
+
+                    </ul>
+                    <!-- Nav category menu END -->
+
+                    <!-- Nav Main menu START -->
+                    <ul class="navbar-nav navbar-nav-scroll me-auto">
+
+                        <!-- Nav item 2 Pages -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesMenu" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Pages</a>
+                            <ul class="dropdown-menu" aria-labelledby="pagesMenu">
+                                <!-- Dropdown submenu -->
+                                <li class="dropdown-submenu dropend">
+                                    <a class="dropdown-item" href="course-list">Course</a>
+                                </li>
+
+                                <li> <a class="dropdown-item" href="instructor-list">Instructor List</a></li>
+
+
+                                <!-- Dropdown submenu -->
+                                <li class="dropdown-submenu dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Authentication</a>
+                                    <ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+                                        <li> <a class="dropdown-item" href="sign-in">Sign In</a></li>
+                                        <li> <a class="dropdown-item" href="sign-up">Sign Up</a></li>
+                                        <li> <a class="dropdown-item" href="forgot-password">Forgot Password</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li> <a class="dropdown-item" href="/cart">Cart</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Nav item 3 Account -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="accounntMenu" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Accounts</a>
+                            <ul class="dropdown-menu" aria-labelledby="accounntMenu">
+                                <div id="instructorMenu" style="display: none;">
+                                    <li> <a class="dropdown-item" href="instructor-dashboard"><i
+                                                class="bi bi-grid-fill fa-fw me-1"></i>Dashboard</a> </li>
+                                    <li> <a class="dropdown-item" href="/instructormanagecourse"><i
+                                                class="bi bi-basket-fill fa-fw me-1"></i>Courses</a> </li>
+                                    <li> <a class="dropdown-item" href="instructor-create-course"><i
+                                                class="bi bi-file-earmark-plus-fill fa-fw me-1"></i>Create
+                                            Course</a> </li>
+                                    <li> <a class="dropdown-item" href="instructor-studentlist"><i
+                                                class="fas fa-user-graduate fa-fw me-1"></i>Students</a> </li>
+                                    <li> <a class="dropdown-item" href="/instructor-order"><i
+                                                class="bi bi-cart-check-fill fa-fw me-1"></i>Orders</a> </li>
+                                </div>
+                                {{!-- -------------------------------------------------------- --}}
+                                <div id="studentMenu" style="display: none;">
+                                    <li> <a class="dropdown-item" href="student-dashboard"><i
+                                                class="bi bi-grid-fill fa-fw me-1"></i>Dashboard</a>
+                                    </li>
+                                    <li> <a class="dropdown-item" href="student-course-list"><i
+                                                class="bi bi-basket-fill fa-fw me-1"></i>Courses</a>
+                                    </li>
+                                    <li> <a class="dropdown-item" href="become-instructor">Become an Instructor</a>
+                                    </li>
+                                </div>
+                                {{!-- -------------------------------------------------------- --}}
+                                <hr class="dropdown-divider">
+                                <li> <a class="dropdown-item" href="/edit-Profile"><i
+                                            class="fas fa-fw fa-edit me-1"></i>Edit
+                                        Profile</a> </li>
+                                <li> <a class="dropdown-item" href="instructor-delete-account"><i
+                                            class="fas fa-fw fa-trash-alt me-1"></i>Delete Profile</a> </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- Nav Main menu END -->
+
+
+                </div>
+                <!-- Main navbar END -->
+                {{!-- add to cart --}}
+                <div class="navbar-nav position-relative overflow-visible me-3">
+                    <a href="/cart" class="nav-link"> <i class="fas fa-shopping-cart fs-5"></i></a>
+                    <span style="line-height: 0; padding: 3px 10px;"
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-success mt-xl-2 ms-n1"
+                        id="itemspam">
+                        <p id="itemNumber"></p>
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </div>
+
+                <!-- Profile START -->
+                <div class="dropdown ms-1 ms-lg-0" id="profile">
+                    <a class="avatar avatar-sm p-0" href="#" id="pFGHJKL;'
+				rofileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img class="avatar-img rounded-circle instProfile" src="" alt="avatar">
+                    </a>
+                    <ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3"
+                        aria-labelledby="profileDropdown">
+                        <!-- Profile info -->
+                        <li class="px-3">
+                            <div class="d-flex align-items-center">
+                                <!-- Avatar -->
+                                <div class="avatar me-3">
+                                    <img class="avatar-img rounded-circle shadow instProfile" src="" alt="avatar">
+                                </div>
+                                <div>
+                                    <a class="h6 userName" href="" id="userName"></a>
+                                    <p class="small m-0" id="avtemail"></p>
+                                </div>
+                            </div>
+                            <hr>
+                        </li>
+                        <!-- Links -->
+                        <li><a class="dropdown-item bg-danger-soft-hover" href="/sign-out"><i
+                                    class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <!-- Dark mode switch START -->
+                        <li>
+                            <div class="modeswitch-wrap" id="darkModeSwitch">
+                                <div class="modeswitch-item">
+                                    <div class="modeswitch-icon"></div>
+                                </div>
+                                <span>Dark mode</span>
+                            </div>
+                        </li>
+                        <!-- Dark mode switch END -->
+                    </ul>
+                </div>
+                <a class="btn-sm btn-success-soft " role="button" href="sign-in" id="SignIN">SignIn</a>
+                <!-- Profile START -->
+            </div>
+        </nav>
+        <!-- Logo Nav END -->
+    </header>
+    <!-- Header END -->
+
+    <!-- **************** MAIN CONTENT START **************** -->
+    <main>
+
+        <!-- Page content START -->
+        <div class="">
+
+
+            <div class="page-content-wrapper border">
+                <!-- Card START -->
+                <div class="card bg-transparent border">
+
+                    <!-- Card body START -->
+                    <div class="card-body">
+                        <!-- Course table START -->
+                        <div class="table-responsive border-0 rounded-3">
+                            <!-- Table START -->
+                            <table class="table table-dark-gray align-middle p-4 mb-0 table-hover" id="mytable">
+                                <!-- Table head -->
+                                <thead>
+                                    <tr>
+                                        <th>images</th>
+                                        <th scope="col"> Name</th>
+                                        <th scope="col">Course Category</th>
+                                        <th scope="col">Language</th>
+                                        <th scope="col">Price</th>
+                                    </tr>
+                                </thead>
+                                <!-- Table body END -->
+                            </table>
+
+                            <!-- Table END -->
+                        </div>
+                        <!-- Course table END -->
+                    </div>
+                    <!-- Card body END -->
+                </div>
+                <!-- Card END -->
+            </div>
+            <!-- Page main content END -->
+
+        </div>
+        <!-- Page content END -->
+
+    </main>
+    <!-- **************** MAIN CONTENT END **************** -->
+    <script type="text/javascript">
+        $.ajax({
+            url: "/islogin",
+            type: "get",
+            success: function (data) {
+                if (data.login) {
+                    $('#SignIN').hide()
+                    $('#profile').show();
+                    $('#accounntMenu').show();
+                    document.getElementById("avtemail").innerHTML = data.user.email;
+                    $('.userName').html(`${data.user.firstName}  ${data.user.lastName}`);
+                    $('.instProfile').attr('src', data.user.image);
+                    $('#accounntMenu').show();
+                    if (data.user.instructor) {
+                        $('#instructorMenu').show();
+                        $('#userName').attr('href', '/instructor-dashboard');
+                    }
+                    else {
+                        $('#studentMenu').show();
+                        $('#userName').attr('href', '/student-dashboard');
+                    }
+                }
+                else {
+                    $('#profile').hide();
+                    $('#SignIN').show();
+                    $('#accounntMenu').hide();
+                };
+            },
+        });
+        $.ajax({
+            url: '/itemnumber',
+            type: 'get',
+            success: function (data) {
+                if (data.length > 0) {
+                    document.getElementById("itemNumber").innerHTML = data.length;
+                }
+                else {
+                    $('#itemspam').hide();
+                }
+            }
+        });
+        $(document).ready(function () {
+            $('#mytable').DataTable({
+                ajax: {
+                    url: '/courseDatatable',
+                    type: 'post',
+                },
+                lengthMenu: [[6, 10], [6, 10]],
+                columns: [
+                    { data: 'image' },
+                    { data: 'courseTitle' },
+                    { data: 'courseCategory' },
+                    { data: 'language' },
+                    { data: 'coursePrice' },
+                ]
+            });
+        });
+
+    </script>
+    <!-- =======================Footer START -->
+    {{>footer}}
+    <!-- =======================Footer END -->
+
+    <!-- Back to top -->
+    <div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Template Functions -->
+    <script src="assets/js/functions.js"></script>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from eduport.webestica.com/admin-instructor-list by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Jan 2022 09:18:37 GMT -->
+
+<head>
+	<title>Eduport- LMS, Education and Course Theme</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+	<meta name="description" content="Eduport- LMS, Education and Course Theme">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&amp;family=Roboto:wght@400;500;700&amp;display=swap">
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/overlay-scrollbar/css/OverlayScrollbars.min.css">
+
+	<!-- Theme CSS -->
+	<link id="style-switch" rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+
+	<!-- **************** MAIN CONTENT START **************** -->
+	<main>
+
+		<!-- Sidebar START -->
+		<nav class="navbar sidebar navbar-expand-xl navbar-dark bg-dark">
+
+			<!-- Navbar brand for xl START -->
+			<div class="d-flex align-items-center">
+				<a class="navbar-brand" href="/">
+					<img class="navbar-brand-item" src="assets/images/logo-light.svg" alt="">
+				</a>
+			</div>
+			<!-- Navbar brand for xl END -->
+
+			<div class="offcanvas offcanvas-start flex-row custom-scrollbar h-100" data-bs-backdrop="true" tabindex="-1"
+				id="offcanvasSidebar">
+				<div class="offcanvas-body sidebar-content d-flex flex-column bg-dark">
+
+					<!-- Sidebar menu START -->
+					<ul class="navbar-nav flex-column" id="navbar-sidebar">
+
+						<!-- Title -->
+						<li class="nav-item ms-2 my-2">Pages</li>
+
+						<!-- menu item 2 -->
+
+						<li class="nav-item"> <a class="nav-link " href="admin-course-list"><i
+									class="bi bi-basket fa-fw me-2"></i>All Courses</a></li>
+
+
+						<!-- Menu item 3 -->
+						<li class="nav-item"> <a class="nav-link" href="admin-student-list"><i
+									class="fas fa-user-graduate fa-fw me-2"></i>Students</a></li>
+
+						<!-- Menu item 4 -->
+						
+						<li class="nav-item"> <a class="nav-link active" href="admin-instructor-list">
+							<i class="fas fa-user-tie fa-fw me-2"></i>Instructors</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="admin-instructor-request"> 
+								<i class="fas fa-arrow-right fa-fw me-2"></i>Instructor requests </a>
+						</li>
+
+					</ul>
+					<!-- Sidebar menu end -->
+
+					<!-- Sidebar footer START -->
+					<div class="px-3 mt-auto pt-3">
+						<div class="d-flex align-items-center justify-content-between text-primary-hover">
+							<a class="h5 mb-0 text-body" href="/admin" data-bs-toggle="tooltip" data-bs-placement="top"
+								title="Sign out">
+								<i class="bi bi-power"></i>
+							</a>
+						</div>
+					</div>
+					<!-- Sidebar footer END -->
+
+				</div>
+			</div>
+		</nav>
+		<!-- Sidebar END -->
+
+		<!-- Page content START -->
+		<div class="page-content">
+
+			<!-- Page main content START -->
+			<div class="page-content-wrapper border">
+
+				<!-- Title -->
+				<div class="row">
+					<div class="col-12">
+						<h1 class="h3 mb-2 mb-sm-0">Instructors</h1>
+					</div>
+				</div>
+
+				<!-- Card START -->
+				<div class="card bg-transparent">
+
+					<!-- Card header START -->
+					<div class="card-header bg-transparent border-bottom px-0">
+						<!-- Search and select START -->
+						<div class="row g-3 align-items-center justify-content-between">
+							<!-- Search bar -->
+							<div class="col-md-8">
+								<form class="rounded position-relative">
+									<input class="form-control bg-transparent" type="search" placeholder="Search"
+										aria-label="Search">
+									<button
+										class="btn bg-transparent px-2 py-0 position-absolute top-50 end-0 translate-middle-y"
+										type="submit"><i class="fas fa-search fs-6 "></i></button>
+								</form>
+							</div>
+						</div>
+						<!-- Search and select END -->
+					</div>
+					<!-- Card header END -->
+
+					<!-- Card body START -->
+					<div class="card-body px-0">
+						<!-- Tabs content START -->
+						<div class="tab-content">
+
+							<!-- Tabs content item START -->
+							<div class="tab-pane fade show active" id="nav-preview-tab-1">
+								<div class="row g-4">
+									{{#each data}}
+									<!-- Card item START -->
+									<div class="col-md-6 col-xxl-4">
+										<div class="card bg-transparent border h-100">
+											<!-- Card header -->
+											<div
+												class="card-header bg-transparent border-bottom d-flex align-items-sm-center justify-content-between">
+												<div class="d-sm-flex align-items-center">
+													<!-- Avatar -->
+													<div class="avatar avatar-md flex-shrink-0">
+														<img class="avatar-img rounded-circle" src={{instructor.image}}
+															alt="avatar">
+													</div>
+													<!-- Info -->
+													<div class="ms-0 ms-sm-2 mt-2 mt-sm-0">
+														<h5 class="mb-0"><a href="#">{{instructor.firstName}}
+																{{instructor.lastName}}</a></h5>
+													</div>
+												</div>
+											</div>
+
+											<div class="card-body">
+												<!-- Total courses -->
+												<div class="d-flex justify-content-between align-items-center">
+													<div class="d-flex align-items-center">
+														<div
+															class="icon-md bg-purple bg-opacity-10 text-purple rounded-circle flex-shrink-0">
+															<i class="fas fa-book fa-fw"></i>
+														</div>
+														<h6 class="mb-0 ms-2 fw-light">Total Courses</h6>
+													</div>
+													<span class="mb-0 fw-bold">{{totalCourse}}</span>
+												</div>
+											</div>
+
+											<!-- Card footer -->
+											<div class="card-footer bg-transparent border-top">
+												<div class="d-flex justify-content-between align-items-center">
+													<!-- Rating star -->
+													<ul class="list-inline mb-0">
+														<li class="list-inline-item me-0 small"><i
+																class="fas fa-star text-warning"></i></li>
+														<li class="list-inline-item me-0 small"><i
+																class="fas fa-star text-warning"></i></li>
+														<li class="list-inline-item me-0 small"><i
+																class="fas fa-star text-warning"></i></li>
+														<li class="list-inline-item me-0 small"><i
+																class="fas fa-star text-warning"></i></li>
+														<li class="list-inline-item me-0 small"><i
+																class="far fa-star text-warning"></i></li>
+													</ul>
+													<!-- Message button -->
+													<a href="#" class="btn btn-link text-body p-0 mb-0"
+														data-bs-toggle="tooltip" data-bs-placement="top" title=""
+														data-bs-original-title="Message" aria-label="Message">
+														<i class="bi bi-envelope-fill"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Card item END -->
+									{{/each}}
+
+								</div>
+								<!-- Row END -->
+							</div>
+							<!-- Tabs content item END -->
+
+						</div>
+						<!-- Tabs content END -->
+					</div>
+					<!-- Card body END -->
+
+				</div>
+				<!-- Card END -->
+			</div>
+			<!-- Page main content END -->
+
+		</div>
+		<!-- Page content END -->
+
+	</main>
+	<!-- **************** MAIN CONTENT END **************** -->
+
+	<!-- Back to top -->
+	<div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
+
+	<!-- Bootstrap JS -->
+	<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/overlay-scrollbar/js/OverlayScrollbars.min.js"></script>
+
+	<!-- Template Functions -->
+	<script src="assets/js/functions.js"></script>
+
+</body>
+
+<!-- Mirrored from eduport.webestica.com/admin-instructor-list by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Jan 2022 09:18:37 GMT -->
+
+</html>

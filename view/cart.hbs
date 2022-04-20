@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from eduport.webestica.com/cart by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Jan 2022 09:16:59 GMT -->
+
+<head>
+	<title>Eduport - LMS, Education and Course Theme</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+	<meta name="description" content="Eduport- LMS, Education and Course Theme">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&amp;family=Roboto:wght@400;500;700&amp;display=swap">
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+	<!-- Theme CSS -->
+	<link id="style-switch" rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<style>
+		.overlay {
+			display: none;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 999;
+			background: rgba(255, 255, 255, 0.8) url("images/loader.gif") center no-repeat;
+		}
+
+		/* Turn off scrollbar when body element has the loading class */
+		body.loading {
+			overflow: hidden;
+		}
+
+		/* Make spinner image visible when body element has the loading class */
+		body.loading .overlay {
+			display: block;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<!-- Header START -->
+	{{>header}}
+	<!-- Header END -->
+
+	<!-- **************** MAIN CONTENT START **************** -->
+	<main>
+		<div class="overlay"></div>
+		<!-- =======================Page Banner START -->
+		<section class="py-0">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="bg-light p-4 text-center rounded-3">
+							<h1 class="m-0">My cart</h1>
+							<!-- Breadcrumb -->
+							<div class="d-flex justify-content-center">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb breadcrumb-dots mb-0">
+										<li class="breadcrumb-item"><a href="/">Home</a></li>
+										<li class="breadcrumb-item"><a href="/course-list">Courses</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Cart</li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- =======================
+Page Banner END -->
+
+		<!-- ======================
+Page content START -->
+		{{#if cartItem}}
+		<section class="pt-5" id="fullCart">
+			<div class="container">
+
+				<div class="row g-4 g-sm-5">
+					<!-- Main content START -->
+					<div class="col-lg-8 mb-4 mb-sm-0">
+						<div class="card card-body p-4 shadow">
+
+
+							{{#each cartItem}}
+							<div class="table-responsive border-0 rounded-3 itemcard" id="card{{_id}}">
+								<!-- Table START -->
+								<table class="table align-middle p-4 mb-0">
+									<!-- Table head -->
+									<!-- Table body START -->
+									<tbody class="border-top-0">
+										<!-- Table item -->
+										{{!-- To Do --}}
+										<tr>
+											<!-- Course item -->
+											<td>
+												<div class="d-lg-flex align-items-center" style="width: 200px;">
+													<!-- Image -->
+													<div class="w-100px w-md-80px mb-2 mb-md-0">
+														<img src={{image}} class="rounded" alt="">
+													</div>
+													<!-- Title -->
+													<h6 class="mb-0 ms-lg-3 mt-2 mt-lg-0">
+														<a href="#">{{courseTitle}}</a>
+													</h6>
+												</div>
+											</td>
+											<!-- Amount item -->
+											<td>
+												<h5 class="text-success mb-0">₹{{coursePrice}}</h5>
+											</td>
+											<td>
+												<div>
+													<button onclick="decQty('{{_id}}')"
+														class="btn btn-sm btn-success-soft px-2 me-1 mb-1 mb-md-0"
+														id="minus"><i class="fas fa-solid fa-minus"></i></button>
+													<span id="{{_id}}"> {{quantity}} </span>
+													<button onclick="incQty('{{_id}}')"
+														class="btn btn-sm btn-success-soft px-2 me-1 mb-1 mb-md-0"
+														id="plus"><i class="fas fa-solid fa-plus"></i></button>
+												</div>
+											</td>
+											<!-- Action item -->
+											<td>
+												<button onclick="index({{@key}},'{{_id}}')"
+													class="btn btn-sm btn-danger-soft px-2 mb-0 removeItem"><i
+														class="fas fa-fw fa-times"></i></button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							{{/each}}
+
+
+						</div>
+					</div>
+					<!-- Main content END -->
+
+					<!-- Right sidebar START -->
+					<div class="col-lg-4">
+						<!-- Card total START -->
+						<div class="card card-body p-4 shadow">
+							<!-- Title -->
+							<h4 class="mb-3">Cart Total</h4>
+
+							<!-- Price and detail -->
+							<ul class="list-group list-group-borderless mb-2">
+								<li class="list-group-item px-0 d-flex justify-content-between">
+									<span class="h6 fw-light mb-0">Original Price</span>
+									<span class="h6 fw-light mb-0 fw-bold" id="originalprice">₹{{OriginalPrice}}</span>
+								</li>
+								<li class="list-group-item px-0 d-flex justify-content-between">
+									<span class="h6 fw-light mb-0">Coupon Discount</span>
+									<span class="text-danger" id="discount">₹{{Discount}}</span>
+								</li>
+								<li class="list-group-item px-0 d-flex justify-content-between">
+									<span class="h5 mb-0">Total</span>
+									<span class="h5 mb-0" id="total">₹{{total}}</span>
+								</li>
+							</ul>
+
+							<!-- Button -->
+							<div class="d-grid">
+								<a href="/checkout" class="btn btn-lg btn-success" id="checkout">Proceed to Checkout</a>
+							</div>
+
+							<!-- Content -->
+							<p class="small mb-0 mt-2 text-center">By completing your purchase, you agree to these <a
+									href="#"><strong>Terms of Service</strong></a></p>
+
+						</div>
+						<!-- Card total END -->
+					</div>
+					<!-- Right sidebar END -->
+
+				</div><!-- Row END -->
+			</div>
+		</section>
+		{{else}}
+		{{!-- <h4 style="text-align: center; margin:15px;">No Item Addded..</h4> --}}
+		<section id="emptyCart">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<!-- Image -->
+						<img src="assets/images/element/cart.svg" class="h-200px h-md-300px mb-3" alt="">
+						<!-- Subtitle -->
+						<h2>Your cart is currently empty</h2>
+						<!-- info -->
+						<p class="mb-0">Please check out all the available courses and buy some courses that fulfill
+							your needs.</p>
+						<!-- Button -->
+						<a href="/" class="btn btn-primary mt-4 mb-0">Back to Shop</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		{{/if}}
+		<!-- =======================Page content END -->
+
+	</main>
+	<!-- **************** MAIN CONTENT END **************** -->
+
+	<!-- =======================
+Footer START -->
+	{{>footer}}
+	<!-- =======================
+Footer END -->
+
+	<!-- Back to top -->
+	<div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
+
+	<!-- Bootstrap JS -->
+	<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Template Functions -->
+	<script src="assets/js/functions.js"></script>
+
+</body>
+<script>
+	function index(key, id) {
+		console.log("you have click on remove button.", key);
+		let data = {
+			index: key,
+			id,
+		}
+		$.ajax({
+			url: "/removeItem",
+			type: "post",
+			data,
+			success: function (respond) {
+				console.log(respond);
+				$(`#card${respond.id}`).remove();
+				document.getElementById("itemNumber").innerHTML = respond.length;
+				if (respond.length == 0) {
+					window.location.href = '/cart'
+				};
+				document.getElementById("originalprice").innerHTML = `₹${respond.OriginalPrice}`;
+				document.getElementById("discount").innerHTML = `₹${respond.Discount}`;
+				document.getElementById("total").innerHTML = `₹${respond.total}`;
+			},
+		});
+	};
+
+	function incQty(id) {
+		console.log("plus clicked");
+		let data = {
+			id: id,
+		}
+		$.ajax({
+			url: '/qtyinc',
+			type: "post",
+			data,
+			success: function (data) {
+				document.getElementById(id).innerHTML = data.qty;
+				document.getElementById("originalprice").innerHTML = `₹${data.OriginalPrice}`;
+				document.getElementById("discount").innerHTML = `₹${data.Discount}`;
+				document.getElementById("total").innerHTML = `₹${data.total}`;
+			},
+			complete: function () {
+				$('.overlay').hide();
+			}
+		})
+
+	};
+	function decQty(id) {
+		console.log("minus clicked");
+		let data = {
+			id: id,
+		}
+		$.ajax({
+			url: '/qtydec',
+			type: "post",
+			data,
+			success: function (data) {
+				document.getElementById(id).innerHTML = data.qty;
+				document.getElementById("originalprice").innerHTML = `₹${data.OriginalPrice}`;
+				document.getElementById("discount").innerHTML = `₹${data.Discount}`;
+				document.getElementById("total").innerHTML = `₹${data.total}`;
+			},
+		})
+	};
+
+</script>
+<!-- Mirrored from eduport.webestica.com/cart by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Jan 2022 09:16:59 GMT -->
+
+</html>

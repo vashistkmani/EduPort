@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from eduport.webestica.com/admin-instructor-request by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Jan 2022 09:18:37 GMT -->
+
+<head>
+	<title>Eduport- LMS, Education and Course Theme</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+	<meta name="description" content="Eduport- LMS, Education and Course Theme">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&amp;family=Roboto:wght@400;500;700&amp;display=swap">
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/choices/css/choices.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/overlay-scrollbar/css/OverlayScrollbars.min.css">
+
+	<!-- Theme CSS -->
+	<link id="style-switch" rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+
+
+	<!-- **************** MAIN CONTENT START **************** -->
+	<main>
+
+		<!-- Sidebar START -->
+		<nav class="navbar sidebar navbar-expand-xl navbar-dark bg-dark">
+
+			<!-- Navbar brand for xl START -->
+			<div class="d-flex align-items-center">
+				<a class="navbar-brand" href="/">
+					<img class="navbar-brand-item" src="assets/images/logo-light.svg" alt="">
+				</a>
+			</div>
+			<!-- Navbar brand for xl END -->
+
+			<div class="offcanvas offcanvas-start flex-row custom-scrollbar h-100" data-bs-backdrop="true" tabindex="-1"
+				id="offcanvasSidebar">
+				<div class="offcanvas-body sidebar-content d-flex flex-column bg-dark">
+
+					<!-- Sidebar menu START -->
+					<ul class="navbar-nav flex-column" id="navbar-sidebar">
+
+						<!-- Title -->
+						<li class="nav-item ms-2 my-2">Pages</li>
+
+						<!-- menu item 2 -->
+
+						<li class="nav-item"> <a class="nav-link " href="admin-course-list"><i
+									class="bi bi-basket fa-fw me-2"></i>All Courses</a></li>
+
+
+						<!-- Menu item 3 -->
+						<li class="nav-item"> <a class="nav-link" href="admin-student-list"><i
+									class="fas fa-user-graduate fa-fw me-2"></i>Students</a></li>
+
+						<!-- Menu item 4 -->
+
+						<li class="nav-item"> <a class="nav-link" href="admin-instructor-list"><i
+									class="fas fa-user-tie fa-fw me-2"></i>Instructors</a>
+						</li>
+						<li class="nav-item"><a class="nav-link active" href="admin-instructor-request">
+								<i class="fas fa-arrow-right fa-fw me-2"></i> Instructor requests </a>
+						</li>
+
+					</ul>
+					<!-- Sidebar menu end -->
+
+					<!-- Sidebar footer START -->
+					<div class="px-3 mt-auto pt-3">
+						<div class="d-flex align-items-center justify-content-between text-primary-hover">
+							<a class="h5 mb-0 text-body" href="/admin" data-bs-toggle="tooltip" data-bs-placement="top"
+								title="Sign out">
+								<i class="bi bi-power"></i>
+							</a>
+						</div>
+					</div>
+					<!-- Sidebar footer END -->
+
+				</div>
+			</div>
+		</nav>
+		<!-- Sidebar END -->
+
+		<!-- Page content START -->
+		<div class="page-content">
+
+			<!-- Page main content START -->
+			<div class="page-content-wrapper border">
+
+				<!-- Title -->
+				<div class="row mb-3">
+					<div class="col-12">
+						<h1 class="h3 mb-2 mb-sm-0">Instructor Requests</h1>
+					</div>
+				</div>
+				{{#if data}}
+				<!-- Main card START -->
+				<div class="card bg-transparent border">
+
+					<!-- Card header START -->
+					<div class="card-header bg-light border-bottom">
+						<!-- Search and select START -->
+						<div class="row g-3 align-items-center justify-content-between">
+
+							<!-- Search bar -->
+
+
+							<!-- Select option -->
+
+						</div>
+						<!-- Search and select END -->
+					</div>
+					<!-- Card header END -->
+
+					<!-- Card body START -->
+					<div class="card-body">
+						<!-- Instructor request table START -->
+						<div class="table-responsive border-0">
+							<table class="table table-dark-gray align-middle p-4 mb-0 table-hover">
+
+								<!-- Table head -->
+								<thead>
+									<tr>
+										<th scope="col" class="border-0 rounded-start">Instructor name</th>
+										{{!-- <th scope="col" class="border-0">Subject</th> --}}
+										<th scope="col" class="border-0">Requested Date</th>
+										<th scope="col" class="border-0 rounded-end">Action</th>
+									</tr>
+								</thead>
+
+								<!-- Table body START -->
+								<tbody>
+									<!-- Table row -->
+									{{#each data}}
+									<tr>
+										<!-- Table data -->
+										<td>
+											<div class="d-flex align-items-center position-relative">
+												<!-- Image -->
+												<div class="avatar avatar-md">
+													<img src={{user.image}} class="rounded-circle" alt="">
+												</div>
+												<div class="mb-0 ms-2">
+													<!-- Title -->
+													<h6 class="mb-0"><a href="#"
+															class="stretched-link">{{user.firstName}}{{user.lastName}}</a>
+													</h6>
+												</div>
+											</div>
+										</td>
+
+										{{!--
+										<!-- Table data -->
+										<td class="text-center text-sm-start">
+											<h6 class="mb-0">HTML, css, bootstrap</h6>
+										</td> --}}
+
+										<!-- Table data -->
+										<td>{{date}}</td>
+
+										<!-- Table data -->
+										<td>
+											<a onclick="accept('{{_id}}','{{user._id}}')"
+												class="btn btn-success-soft me-1 mb-1 mb-lg-0">Accept</a>
+											<a onclick="reject('{{_id}}')"
+												class="btn btn-secondary-soft me-1 mb-1 mb-lg-0">Reject</a>
+											{{!-- <a href="#" class="btn btn-primary-soft me-1 mb-0"
+												data-bs-toggle="modal" data-bs-target="#appDetail">View App</a> --}}
+										</td>
+									</tr>
+									{{/each}}
+
+								</tbody>
+								<!-- Table body END -->
+							</table>
+						</div>
+						<!-- Instructor request table END -->
+					</div>
+					<!-- Card body END -->
+
+				</div>
+				<!-- Main card END -->
+				{{else}}
+				<hr>
+				<div>
+					<h1>No Requests</h1>
+				</div>
+				{{/if}}
+			</div>
+			<!-- Page main content END -->
+
+		</div>
+		<!-- Page content END -->
+
+	</main>
+	<!-- **************** MAIN CONTENT END **************** -->
+	<script>
+		function accept(id, user) {
+			$.ajax({
+				url: "/requestAceept",
+				method: "post",
+				data: {
+					id: id,
+					user: user,
+				},
+				success: function (data) {
+					console.log("succes confirm", data);
+					window.location.href = '/admin-instructor-request'
+				}
+			})
+		}
+		function reject(id) {
+			console.log("reject", id);
+			$.ajax({
+				url: "/requestReject",
+				method: "post",
+				data: {
+					id: id,
+				},
+				success: function (data) {
+					console.log("confirm", data);
+					window.location.href = '/admin-instructor-request'
+				}
+			})
+		}
+
+	</script>
+
+	<!-- Back to top -->
+	<div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
+
+	<!-- Bootstrap JS -->
+	<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Vendors -->
+	<script src="assets/vendor/choices/js/choices.min.js"></script>
+	<script src="assets/vendor/overlay-scrollbar/js/OverlayScrollbars.min.js"></script>
+
+	<!-- Template Functions -->
+	<script src="assets/js/functions.js"></script>
+
+</body>
+
+<!-- Mirrored from eduport.webestica.com/admin-instructor-request by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Jan 2022 09:18:37 GMT -->
+
+</html>

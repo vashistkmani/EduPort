@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from eduport.webestica.com/admin-course-list by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Jan 2022 09:18:36 GMT -->
+
+<head>
+	<title>Eduport- LMS, Education and Course Theme</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+	<meta name="description" content="Eduport- LMS, Education and Course Theme">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&amp;family=Roboto:wght@400;500;700&amp;display=swap">
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/choices/css/choices.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/overlay-scrollbar/css/OverlayScrollbars.min.css">
+
+	<!-- Theme CSS -->
+	<link id="style-switch" rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+
+	<!-- **************** MAIN CONTENT START **************** -->
+	<main>
+
+		<!-- Sidebar START -->
+		<nav class="navbar sidebar navbar-expand-xl navbar-dark bg-dark">
+
+			<!-- Navbar brand for xl START -->
+			<div class="d-flex align-items-center">
+				<a class="navbar-brand" href="/">
+					<img class="navbar-brand-item" src="assets/images/logo-light.svg" alt="">
+				</a>
+			</div>
+			<!-- Navbar brand for xl END -->
+
+			<div class="offcanvas offcanvas-start flex-row custom-scrollbar h-100" data-bs-backdrop="true" tabindex="-1"
+				id="offcanvasSidebar">
+				<div class="offcanvas-body sidebar-content d-flex flex-column bg-dark">
+
+					<!-- Sidebar menu START -->
+					<ul class="navbar-nav flex-column" id="navbar-sidebar">
+
+						<!-- Title -->
+						<li class="nav-item ms-2 my-2">Pages</li>
+
+						<!-- menu item 2 -->
+
+						<li class="nav-item"> <a class="nav-link active" href="admin-course-list"><i
+									class="bi bi-basket fa-fw me-2"></i>All Courses</a></li>
+
+
+						<!-- Menu item 3 -->
+						<li class="nav-item"> <a class="nav-link" href="admin-student-list"><i
+									class="fas fa-user-graduate fa-fw me-2"></i>Students</a></li>
+
+						<!-- Menu item 4 -->
+						<li class="nav-item"> <a class="nav-link " href="admin-instructor-list">
+								<i class="fas fa-user-tie fa-fw me-2"></i>Instructors</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="admin-instructor-request">
+								<i class="fas fa-arrow-right fa-fw me-2"></i>Instructor requests </a>
+						</li>
+					</ul>
+					<!-- Sidebar menu end -->
+
+					<!-- Sidebar footer START -->
+					<div class="px-3 mt-auto pt-3">
+						<div class="d-flex align-items-center justify-content-between text-primary-hover">
+							<a class="h5 mb-0 text-body" href="/admin" data-bs-toggle="tooltip" data-bs-placement="top"
+								title="Sign out">
+								<i class="bi bi-power"></i>
+							</a>
+						</div>
+					</div>
+					<!-- Sidebar footer END -->
+
+				</div>
+			</div>
+		</nav>
+		<!-- Sidebar END -->
+
+		<!-- Page content START -->
+		<div class="page-content">
+
+			
+
+			<!-- Page main content START -->
+			<div class="page-content-wrapper border">
+
+				<!-- Title -->
+				<div class="row mb-3">
+					<div class="col-12 d-sm-flex justify-content-between align-items-center">
+						<h1 class="h3 mb-2 mb-sm-0">Courses</h1>
+					</div>
+				</div>
+
+				<!-- Course boxes START -->
+				<div class="row g-4 mb-4">
+					<!-- Course item -->
+					<div class="col-sm-6 col-lg-4">
+						<div class="text-center p-4 bg-primary bg-opacity-10 border border-primary rounded-3">
+							<h6>Total Courses</h6>
+							<h2 class="mb-0 fs-1 text-primary">{{totalCourse}}</h2>
+						</div>
+					</div>
+
+					<!-- Course item -->
+					<div class="col-sm-6 col-lg-4">
+						<div class="text-center p-4 bg-success bg-opacity-10 border border-success rounded-3">
+							<h6>Activated Courses</h6>
+							<h2 class="mb-0 fs-1 text-success">{{activeCourse}}</h2>
+						</div>
+					</div>
+
+					<!-- Course item -->
+					<div class="col-sm-6 col-lg-4">
+						<div class="text-center p-4  bg-warning bg-opacity-15 border border-warning rounded-3">
+							<h6>Pending Courses</h6>
+							<h2 class="mb-0 fs-1 text-warning">{{pendingCourse}}</h2>
+						</div>
+					</div>
+				</div>
+				<!-- Course boxes END -->
+
+				<!-- Card START -->
+				<div class="card bg-transparent border">
+
+					<!-- Card header START -->
+					<div class="card-header bg-light border-bottom">
+						<!-- Search and select START -->
+						<div class="row g-3 align-items-center justify-content-between">
+							<!-- Search bar -->
+							<div class="col-md-8">
+								<form class="rounded position-relative">
+									<input class="form-control bg-body" type="search" placeholder="Search"
+										aria-label="Search" name="course" id="courseSearch">
+									<button
+										class="btn bg-transparent px-2 py-0 position-absolute top-50 end-0 translate-middle-y"
+										type="submit" id="searchButton"><i class="fas fa-search fs-6 "></i></button>
+								</form>
+							</div>
+						</div>
+						<!-- Search and select END -->
+					</div>
+					<!-- Card header END -->
+
+					<!-- Card body START -->
+					<div class="card-body">
+						<!-- Course table START -->
+						<div class="table-responsive border-0 rounded-3">
+							<!-- Table START -->
+							<table class="table table-dark-gray align-middle p-4 mb-0 table-hover">
+								<!-- Table head -->
+								<thead>
+									<tr>
+										<th scope="col" class="border-0 rounded-start">Course Name</th>
+										<th scope="col" class="border-0">Instructor</th>
+										<th scope="col" class="border-0">Added Date</th>
+										<th scope="col" class="border-0">Type</th>
+										<th scope="col" class="border-0">Price</th>
+										<th scope="col" class="border-0">Status</th>
+									</tr>
+								</thead>
+
+								<!-- Table body START -->
+								<tbody>
+
+									<!-- Table row -->
+									{{#each data}}
+									<tr>
+										<!-- Table data -->
+										<td>
+											<div class="d-flex align-items-center position-relative">
+												<!-- Image -->
+												<div class="w-60px">
+													<img src="{{image}}" class="rounded" alt="">
+												</div>
+												<!-- Title -->
+												<h6 class="mb-0 ms-2">
+													<a href="#" class="stretched-link"> {{courseTitle}} </a>
+												</h6>
+											</div>
+										</td>
+
+										<!-- Table data -->
+										<td>
+											<div class="d-flex align-items-center mb-3">
+												<!-- Avatar -->
+												<div class="avatar avatar-xs flex-shrink-0">
+													<img class="avatar-img rounded-circle" src="{{user.image}}"
+														alt="avatar">
+												</div>
+												<!-- Info -->
+												<div class="ms-2">
+													<h6 class="mb-0 fw-light">{{user.firstName}} {{user.lastName}}</h6>
+												</div>
+											</div>
+										</td>
+
+										<!-- Table data -->
+										<td>{{date}}</td>
+
+										<!-- Table data -->
+										<td> <span class="badge bg-primary text-white">{{courseLevel}}</span> </td>
+
+										<!-- Table data -->
+										<td> ₹ {{coursePrice}} </td>
+
+										<!-- Table data -->
+										<td> <span
+												class="badge bg-warning bg-opacity-15 text-warning">{{completed}}</span>
+										</td>
+									</tr>
+									{{/each}}
+
+								</tbody>
+								<!-- Table body END -->
+							</table>
+							<!-- Table END -->
+						</div>
+						<!-- Course table END -->
+					</div>
+					<!-- Card body END -->
+
+				</div>
+				<!-- Card END -->
+			</div>
+			<!-- Page main content END -->
+
+		</div>
+		<!-- Page content END -->
+
+	</main>
+	<!-- **************** MAIN CONTENT END **************** -->
+	<script>
+		$(document).ready(function () {
+			$('#searchButton').click(function () {
+				let inputValue = $('#courseSearch').val();
+				$.ajax({
+					url: `/admin-course-list?course=${inputValue}`,
+					method: 'get',
+				})
+			});
+		});
+	</script>
+
+	<!-- Back to top -->
+	<div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
+
+	<!-- Bootstrap JS -->
+	<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Vendors -->
+	<script src="assets/vendor/choices/js/choices.min.js"></script>
+	<script src="assets/vendor/overlay-scrollbar/js/OverlayScrollbars.min.js"></script>
+
+	<!-- Template Functions -->
+	<script src="assets/js/functions.js"></script>
+
+</body>
+
+<!-- Mirrored from eduport.webestica.com/admin-course-list by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Jan 2022 09:18:36 GMT -->
+
+</html>
