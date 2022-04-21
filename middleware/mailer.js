@@ -14,14 +14,14 @@ let resetPassword = {
                 secure: true,
                 port: 465,
                 auth: {
-                    user: 'ritik.parikh@crystaltechlab.com',
-                    pass: 'ritik.parikh@CTL',
+                    user:'', //input email Address,
+                    pass:'' ,//input password,
                 },
             });
             let randomPassword = Math.floor(1000 + Math.random() * 9000);
             await user.findOneAndUpdate({ email: req.body.email }, { $set: { randomPassword } });
             let info = await transporter.sendMail({
-                from: 'ritik.parikh@crystaltechlab.com',
+                from: '', //input email address
                 to: req.body.email,
                 subject: "Reset Password || EduPort",
                 html: "<p> Your Registred email id : </p>" + req.body.email + "<p> Login Password :</p> " + randomPassword,
