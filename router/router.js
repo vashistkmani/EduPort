@@ -16,7 +16,7 @@ const storage = multer.diskStorage({
     }
 });
 
-var upload = multer({ storage: storage });
+    var upload = multer({ storage: storage });
 
 // ---------------------- require controller ------------------------------
 const homeController = require('../controller/homepage');

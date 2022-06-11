@@ -1,5 +1,5 @@
 //--------required modoles.............................
-require('./config/database');
+const serverDB = require('./config/database');
 const express = require('express');
 const app = express();
 const hbs = require('hbs');
@@ -7,9 +7,8 @@ const path = require('path');
 const route = require('./router/router');
 const session = require('./middleware/session');
 const helpers = require('./middleware/helper');
-const async = require('hbs/lib/async');
-
-
+const port = 3000;
+serverDB();
 //----------- static path ................................
 const staticpath = path.join(__dirname, 'public');
 app.use(express.static(staticpath));
@@ -51,7 +50,6 @@ app.use(express.urlencoded({ extended: true }))
 app.use(route);
 
 //--------------- server .......................
-const port = 3000;
 app.listen(port, () => {
     console.log(`Server = http://localhost:${port}`)
 })
